@@ -30,6 +30,7 @@ const people = [
 //--(unlike filter)
 //uses values from original array when making a 
 //new one
+//this is a test
 
 const getAges = (person) => person.age * 2
 
