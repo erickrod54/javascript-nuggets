@@ -22,8 +22,6 @@ const people = [
     },
 ]
 
-
-
 //Quokka.js - Extension
 //returns a new array
 //does not change the original size of the array
