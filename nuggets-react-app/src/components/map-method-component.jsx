@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import data from '../data'
 
+/**Nuggets react version 2 - Map method - 
+ * MapMethod Component:
+ *        -->Building MapMethod Component
+ * 
+ */
 const MapMethod = () => {
 
     return(
@@ -10,11 +15,12 @@ const MapMethod = () => {
             return(
                 <>
                 <h1>{name}</h1>
-                <h1>{age}</h1>
+                <h1>{age}</h1> 
                 <h1>{position}</h1>
                 </>
             )
         })}
+        
         </>
     )
 
