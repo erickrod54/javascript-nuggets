@@ -37,3 +37,9 @@ const categories = [ all, ...new set(menu.map((item) => item.category))]
  * category
  */
 console.log(categories)
+
+//here i return every button with a category -render in index-
+const result = document.querySelector('.result');
+result.innerHTML = categories.map((category) => {
+    return `<button>${category}</button>`;
+})
