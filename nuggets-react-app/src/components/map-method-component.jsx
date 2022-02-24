@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import data from '../data'
+import { data } from '../data'
 
-/**Nuggets react version 2 - Map method - 
+/**Nuggets react version 4 - Map method - 
  * MapMethod Component:
- *        -->Building MapMethod Component
+ *        -->Modifying the importing 
+ *          -reference data js file-
  * 
  */
 const MapMethod = () => {
