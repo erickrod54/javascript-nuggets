@@ -1,4 +1,8 @@
-const data = [
+/**the default export was modifyied to 
+ * in order to work with all the data
+ * that i need for each practice*/
+
+export const data = [
     {
         name: 'bob',
         age:20,
@@ -20,5 +24,30 @@ const data = [
         position:  'intern'
     },
 ]
-
-export default data;
+//I add Unique Values data
+export const menu = [
+    {
+     name: 'pancakes',
+     category: 'breakfast'
+    },
+    {
+        name: 'burger',
+        category: 'lunch'
+    },
+    {
+        name: 'steak',
+        category: 'dinner'
+    },
+    {
+        name: 'bacon',
+        category: 'breakfast'
+    },
+    {
+        name: 'eggs',
+        category: 'breakfast'
+    },
+    {
+        name: 'pasta',
+        category: 'dinner'
+    }
+];
