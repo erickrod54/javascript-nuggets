@@ -49,3 +49,25 @@ app[keyName] = 'apple'
 
 console.log(app) //prompt me: { loading : true, computer : apple}
 
+/**Creating updating function to change keyName and value*/
+
+//i build first the state
+const state = {
+    loading: true,
+    name:'',
+    job:''
+}
+
+//then i build an update function
+function updateState(key, value){
+    state[key] = value
+}
+
+//i invoke the update function given keyName and value
+updateState('name','Erick')
+updateState('job','developer')
+updateState('loading',false)
+
+//i prompt the result
+console.log(state) // { loading:false, name:'Erick', job:'developer' }
+
