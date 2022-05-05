@@ -51,3 +51,35 @@ export const menu = [
         category: 'dinner'
     }
 ];
+
+export const OrSomePeople = [
+    {
+        name:'Christina', 
+        age:45, 
+        position:'OR Scrub Tech'
+    }
+    ,
+    {
+        name:'Terry', 
+        age:40, 
+        position:'Robotics Tech'
+    }
+    ,
+    {
+        name:'Cesar', 
+        age:25, 
+        position:'Robotics Tech'
+    }
+    ,
+    {
+        name:'Pete', 
+        age:30, 
+        position:'Robotics Tech'
+    }
+    ,
+    {
+        name:'Joseph', 
+        age:47, 
+        position:'Surgical Tech'
+    }
+]
