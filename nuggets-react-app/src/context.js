@@ -1,37 +1,22 @@
-import React, { useReducer, useContext } from "react";
-import { OrSomePeople } from "./data";
-import reducer from './reducer'
+import React from 'react';
+import { data } from './data';
 
-/**Filter and Find method React version 1 -
- * context js file - Features:
- * 
- *        --->Building AppContext.
- *        --->Building AppProvider
- */
+/**Making the 'NuggetsContext' i'll have access
+ * to the 'Consumer' and 'Provider' method */
+export const NuggetsContext = React.createContext();
 
-/**here i create the context */
-const AppContext = React.createContext()
+export const NuggetsProvider = ({ children }) => {
 
-/**here i create the initial state */
-const initialState = {
-    loading: false,
-    people: OrSomePeople
-}
-
-const AppProvider = ({ children }) => {
-    const [ state, dispatch ] = useReducer( reducer, initialState )
-    /**Here i'll build filter and find methods */
-
-    /**here in the value i'll pass the functionalities as a value */
     return(
-        <AppContext.Provider
-           value={{
-               ...state
-           }}
-        >
-         {children}  
-        </AppContext.Provider>
+        <NuggetsContext.Provider 
+            value={{
+                data
+            }}>
+            {children}
+        </NuggetsContext.Provider>
     )
 }
 
-export {AppContext, AppProvider}
+export const useNuggetsContext = () => {
+    React.useContext(NuggetsContext);
+}
