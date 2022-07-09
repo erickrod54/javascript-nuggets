@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { data } from '../data'
+import React from "react";
+import { NuggetsContext } from '../context'
 
-/**Nuggets react version 4 - Map method - 
+/**Nuggets react version 3 - Map method - 
  * MapMethod Component:
  *        -->Modifying the importing 
  *          -reference data js file-
@@ -9,8 +9,11 @@ import { data } from '../data'
  */
 const MapMethod = () => {
 
+    const { data }  = React.useContext(NuggetsContext)
+
     return(
         <>
+        {/**<h2>Provided by Nuggets Context: {datas}</h2> */}
         {data.map((person) => {
             const { name, age, position } = person
             return(
