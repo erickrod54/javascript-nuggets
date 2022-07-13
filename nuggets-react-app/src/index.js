@@ -2,16 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { NuggetsProvider as AppProvider } from './context'
+
+/**Nuggets-react-app version 4 - index js file 
+ * - Features:
+ * 
+ *      --> Importing and wrapping the whole
+ *          app with the 'AppProvider'
+ * 
+ * Note: the Provider is set as an allias, -i have
+ * to check the vscode json file -, and is going
+ * to provide features and data for the application  
+ */
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppProvider>
+      <App />
+    </AppProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
