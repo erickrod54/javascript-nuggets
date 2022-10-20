@@ -1,16 +1,18 @@
 import React from "react";
 import { useNuggetsContext } from '../context'
 
-/**Nuggets-react-app version 4 - map-mehod-compoent 
- * - Features:
+/**JavaScript-Nuggets-app version 4 - 
+ * Map-Method Values - Features: 
  * 
- *      --> Fixing on version 4 'map-method-component'.
+ *       --> Stays in the same version
+ *           no major changes.
  * 
- *      --> Destrucutring the 'data' from 
- *          'useNuggetsContext' hook.
+ *       --> Cleaning bugs and errors
+ *           related with the key prop.
  * 
- * Note: Destruturing data from the Provider in order
- * to map it and render on this Component.  
+ * Note: next versions i'll refactor the
+ * whole app to include all the methods
+ * and examples
  */
 
 const MapMethod = () => {
@@ -23,11 +25,11 @@ const MapMethod = () => {
         {data.map((person) => {
             const { name, age, position } = person
             return(
-                <>
+            <div key={age}>
                 <h1>{name}</h1>
                 <h1>{age}</h1> 
                 <h1>{position}</h1>
-                </>
+            </div>    
             )
         })}
         
