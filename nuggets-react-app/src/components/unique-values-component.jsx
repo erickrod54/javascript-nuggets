@@ -1,20 +1,18 @@
 import React from "react";
 import { menu } from "../data";
 
-/**Unique Values version 1 - Features: 
+/**JavaScript-Nuggets-app version 4 - 
+ * Unique Values - Features: 
  * 
- *       -->Keeping in 'categories' the 
- *          string 'all' and spreading a
- *          'new Set' of mapping the 
- *          category of every item.
+ *       --> Stays in the same version
+ *           no major changes.
  * 
- *       -->Then Mapping the 'categories'
- *          variable and rendering every
- *          'category'
+ *       --> Cleaning bugs and errors
+ *           related with the key prop.
  * 
- * Note: 'new Set' return 'unique values' 
- * with no repetition even if indeed i have
- * repeteated values
+ * Note: next versions i'll refactor the
+ * whole app to include all the methods
+ * and examples
  */
 
  
@@ -29,7 +27,7 @@ const categories = [ 'all',
     return(
         <>
             {categories.map((category) => {
-                return <button>{category}</button>
+                return <button key={category}>{category}</button>
             })}   
             
         </>
