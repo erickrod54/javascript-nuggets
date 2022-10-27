@@ -6,7 +6,7 @@ import styled from "styled-components";
 /**JavaScrip nuggets React version 4 - navbar js -
  * Features:
  * 
- *  --> Building Navbar Component
+ *  --> Building 'NavBarWrapper' and start to refactor links
  * 
  * Note: this approach has static links
 */
@@ -46,7 +46,15 @@ const NavBar = () => {
 }
 
 const NavBarWrapper = styled.div`
+    ul{
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+    }
 
+    li{
+        text-decoration: none;
+    }
 `
 
 export default NavBar;
