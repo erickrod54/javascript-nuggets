@@ -2,7 +2,7 @@
  * in order to work with all the data
  * that i need for each practice*/
 
-export const data = [
+ export const data = [
     {
         name: 'bob',
         age:20,

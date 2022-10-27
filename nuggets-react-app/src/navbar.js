@@ -1,7 +1,9 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import styled from "styled-components";
 
-/**JavaScrip nuggets React version 2 - navbar js -
+
+/**JavaScrip nuggets React version 4 - navbar js -
  * Features:
  * 
  *  --> Building Navbar Component
@@ -19,7 +21,7 @@ const NavBar = () => {
   const { pathname } = useLocation();
 
     return(
-        <>
+       <NavBarWrapper>
         <nav>
             <ul>
                 <li>
@@ -37,8 +39,14 @@ const NavBar = () => {
             </ul>
             <h2>You're in: { pathname }</h2>
         </nav>
-        </>
+        
+       </NavBarWrapper>
+       
     )
 }
+
+const NavBarWrapper = styled.div`
+
+`
 
 export default NavBar;
