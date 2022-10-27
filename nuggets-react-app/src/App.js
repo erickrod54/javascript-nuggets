@@ -8,14 +8,17 @@ import Home from './home';
 import { FilterAndFind, MapMethod, UniqueValues } from './components/index.components'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-//import NavBar from './navbar';
+import NavBar from './navbar';
 
-/**Nuggets react version 2 - App js file- Features: 
+/**Nuggets react version 4 - App js file- Features: 
  * 
- *     ---->Implementing 'react-router-dom' to
- *          set every nuggets-react-version 
- *          Components as Route 
+ *     ---->Importing and placing 'NavBar' Component
+ *          with styled components test 
  * 
+ * 
+ * Note: By this version issues related with react-router
+ * -don and react-dom versions are solved so i can start 
+ * implementing styled component to refactor the app
  */
 
 function App() {
@@ -23,6 +26,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <NavBar />
           <Routes>
           <Route path='/'  element={<Home />}></Route>
           <Route path='/map-method' element={<MapMethod />}/>
