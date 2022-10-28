@@ -1,24 +1,20 @@
 import React from 'react';
-import Error from './error'
-import Home from './home';
-//import MapMethod from './components/map-method-component';
-//import  UniqueValues  from './components/unique-values-component';
-//import FilterAndFind from './components/filterAndfind-method.component';
-
+import ErrorComponent from './error'
+import Home from './pages/home'
 import { FilterAndFind, MapMethod, UniqueValues } from './components/index.components'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import NavBar from './navbar';
 
-/**Nuggets react version 4 - App js file- Features: 
+/**Nuggets react version 5 - App js file- Features: 
  * 
- *     ---->Importing and placing 'NavBar' Component
- *          with styled components test 
+ *     --> Fixing error related with name imports 
  * 
+ * Note: This error was fixed by changing 'Error' 
+ * for 'ErrorComponent'
  * 
- * Note: By this version issues related with react-router
- * -don and react-dom versions are solved so i can start 
- * implementing styled component to refactor the app
+ * By this version errors and warnings are 
+ * cleared, so i can start the refactor
  */
 
 function App() {
@@ -28,11 +24,11 @@ function App() {
       <Router>
         <NavBar />
           <Routes>
-          <Route path='/'  element={<Home />}></Route>
+          <Route path='/'  element={<Home />} />
           <Route path='/map-method' element={<MapMethod />}/>
           <Route path='/unique-values'  element={<UniqueValues />}/>
           <Route path='/filter-and-find'  element={<FilterAndFind />}/>
-          <Route path='*'  element={<Error />}/>          
+          <Route path='*'  element={<ErrorComponent />}/>          
         </Routes>
       </Router>
     </div>
