@@ -4,11 +4,11 @@ import Home from './pages/home'
 import { FilterAndFind, MapMethod, UniqueValues } from './components/index.components'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import NavBar from './navbar';
 
-/**Nuggets react version 5 - App js file- Features: 
+/**Nuggets react version 6 - App js file- Features: 
  * 
- *     --> Fixing error related with name imports 
+ *     --> Removing Navbar to re structure in 
+ *        'Home' Page. 
  * 
  * Note: This error was fixed by changing 'Error' 
  * for 'ErrorComponent'
@@ -22,13 +22,13 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar />
           <Routes>
-          <Route path='/'  element={<Home />} />
-          <Route path='/map-method' element={<MapMethod />}/>
-          <Route path='/unique-values'  element={<UniqueValues />}/>
-          <Route path='/filter-and-find'  element={<FilterAndFind />}/>
-          <Route path='*'  element={<ErrorComponent />}/>          
+          <Route path='/'  element={<Home />} >
+            <Route path='/map-method' element={<MapMethod />}/>
+            <Route path='/unique-values'  element={<UniqueValues />}/>
+            <Route path='/filter-and-find'  element={<FilterAndFind />}/>
+            <Route path='*'  element={<ErrorComponent />}/>          
+          </Route>
         </Routes>
       </Router>
     </div>
