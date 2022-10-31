@@ -5,16 +5,11 @@ import MainTitle from "../components/main.title";
 import WhereAmI from "../components/whereami.component";
 import NavBar from "../navbar";
 
-/**Nuggets react version 6 - Home - 
+/**Nuggets react version 7 - Home - 
  * Features: 
  * 
- *     --> Implementing 'useLocation'
- *         hook to conditionally render
- *         a home message.
- * 
- *     --> Building 'OutletWrapper' style
- *         Component to make a container
- *          for the outlet data.
+ *     --> Changing styles for 
+ *        'OutletWrapper'
  * 
  * Note: This component will show the 
  * navigation location of the user
@@ -41,7 +36,7 @@ const Home = () => {
             </h2>
             :
             null 
-            }
+        }
             
             <OutletWrapper>
               <Outlet />
@@ -66,8 +61,9 @@ const HomeWrapper = styled.div`
 `
 
 const OutletWrapper = styled.section`
-    width: 30rem;
-    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 `
 
 export default Home;
