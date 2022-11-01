@@ -1,19 +1,13 @@
 import React, { useContext } from 'react';
-import { data } from './data';
+import { data, menu } from './data';
 
-/**Nuggets-react-app version 4 - map-mehod-compoent 
+/**Nuggets-react-app version 7 - context js 
  * - Features:
  * 
- *      --> Fixing the 'context' file version
- *          on 4. 
+ *      --> Importing and providing 'menu' data.
  * 
- *      --> Fixing the 'useNuggetsContext' hook to
- *          use it on the Component that i
- *          need to provide features and data.
- * 
- * Note: 'useNuggetsContext' is going to be use
- * to save lines of code just writting the 
- * 'useContext' hook once.
+ * Note: with 'menu' data being provided by context
+ * i will start to refactor unique values app
  */
 
 /**Making the 'NuggetsContext' i'll have access
@@ -25,7 +19,8 @@ export const NuggetsProvider = ({ children }) => {
     return(
         <NuggetsContext.Provider 
             value={{
-                data
+                data,
+                menu
             }}>
             {children}
         </NuggetsContext.Provider>
