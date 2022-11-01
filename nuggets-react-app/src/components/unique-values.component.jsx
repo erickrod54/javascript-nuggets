@@ -1,14 +1,15 @@
 import React from "react";
-import { menu } from "../data";
+import styled from "styled-components";
+import { useNuggetsContext } from "../context";
 
-/**JavaScript-Nuggets-app version 4 - 
+/**JavaScript-Nuggets-app version 7 - 
  * Unique Values - Features: 
  * 
- *       --> Stays in the same version
- *           no major changes.
+ *       --> Importing menu from 
+ *          'useNuggetsContext()'.
  * 
- *       --> Cleaning bugs and errors
- *           related with the key prop.
+ *       --> Logging and texting 
+ *           'menu' data from context
  * 
  * Note: next versions i'll refactor the
  * whole app to include all the methods
@@ -18,6 +19,11 @@ import { menu } from "../data";
  
 
 const UniqueValues = () => {
+
+
+const { menu } = useNuggetsContext()
+
+console.log('the menu data', menu)
  
 /**here i create and keep in 'categories'
  * a 'new Set' of unique values*/    
@@ -34,5 +40,9 @@ const categories = [ 'all',
     )
 
 }
+
+const Wrappper = styled.div`
+
+`
 
 export default UniqueValues;
