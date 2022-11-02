@@ -1,8 +1,8 @@
-/**JavaScript-Nuggets-app version 9 - 
+/**JavaScript-Nuggets-app version 10 - 
  * data js - Features: 
  * 
- *       --> adding an 'id' to 
- *          'menu'
+ *       --> Building 'staff' data 
+ *           for reduce method.
  * 
  * Note: changes maybe will apply later
  * to this file
@@ -93,5 +93,35 @@ export const OrSomePeople = [
         name:'Joseph', 
         age:47, 
         position:'Surgical Tech'
+    }
+]
+
+export const staff = [
+    {
+        name:'bob', 
+        age:20, 
+        position:'developer',
+        salary:100
+    }
+    ,
+    {
+        name:'peter', 
+        age:25, 
+        position:'designer',
+        salary:300
+    }
+    ,
+    {
+        name:'susy', 
+        age:30, 
+        position:'the boss',
+        salary:400
+    }
+    ,
+    {
+        name:'anna', 
+        age:35, 
+        position:'intern',
+        salary:10
     }
 ]
