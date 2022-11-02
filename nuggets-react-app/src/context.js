@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
-import { data, menu } from './data';
+import { data, menu, staff } from './data';
 
-/**Nuggets-react-app version 7 - context js 
+/**Nuggets-react-app version 10 - context js 
  * - Features:
  * 
- *      --> Importing and providing 'menu' data.
+ *      --> Importing and providing 'staff' data.
  * 
- * Note: with 'menu' data being provided by context
- * i will start to refactor unique values app
+ * Note: with 'staff' data is going to be built
+ * the 'ReduceMethod'
  */
 
 /**Making the 'NuggetsContext' i'll have access
@@ -20,7 +20,8 @@ export const NuggetsProvider = ({ children }) => {
         <NuggetsContext.Provider 
             value={{
                 data,
-                menu
+                menu,
+                staff
             }}>
             {children}
         </NuggetsContext.Provider>
