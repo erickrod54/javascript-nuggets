@@ -2,15 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { useNuggetsContext } from "../context";
 
-/**JavaScript-Nuggets-app version 8 - 
+/**JavaScript-Nuggets-app version 9 - 
  * Unique Values - Features: 
  * 
- *       --> Starting to implement
- *           styled components
+ *       --> Refactoring 'UniqueValues'
  * 
- * Note: this is the start point 
- * to re factor 'UniqueValues'
- * app
+ * Note: pending to make in it 
+ * responsive
  */
 
  
@@ -33,9 +31,58 @@ const categories = [ 'all',
 
         <UniqueValuesWrapper>
 
-           {categories.map((category) => {
-               return <button key={category}>{category}</button>
-           })}   
+
+            <ul >
+            <section>
+                <p>The unique values method creates a 'new Set' 
+                    (an array) that filters eficiently an array 
+                    that originaly has duplicates as follows:
+                </p>
+            </section>
+                <li>
+                {menu.map((item) => {
+                    const { id, category } = item;
+                    return(
+                    <ul key={id} >
+                    <li>
+                        <button key={id}>{category}</button>
+                    </li>
+                </ul>     
+                    )
+                })}
+                </li>
+                <section>
+                <p>
+                    After applying :
+                </p>
+                <ul>
+                    <li>
+                        <section className="code-block">
+                            <p>{`const categories = [ 'all', ...new Set(menu.map((item) => item.category))]`}</p>
+                        </section>
+                    </li>
+                </ul>
+                <p>
+                    will result in, 'unique values' ( useful cases when i have for 
+                        categories for several items and i need to keep only
+                        'unique values' as result):
+                </p>
+              </section>
+                <li >
+                {categories.map((category) => {
+                    
+                    return (
+                    <ul key={category} >
+                        <li>
+                            <button>{category}</button>
+                        </li>
+                    </ul>
+                    
+                    )
+                })}    
+                </li>
+            </ul>
+        
         </UniqueValuesWrapper>
        </Wrappper>
             
@@ -45,12 +92,34 @@ const categories = [ 'all',
 }
 
 const Wrappper = styled.div`
-    display: flex;
-    flex-direction: column;
+
 `
 
 const UniqueValuesWrapper = styled.div`
+display: flex;
+justify-content: center;
 
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        
+        width: 70%;
+    }
+
+ 
+    li{
+        display: flex;
+    }
+
+    section ul li {
+        border: 1px solid black;
+        margin-bottom: 20px;
+    }
+
+    
 `
 
 export default UniqueValues;
