@@ -1,6 +1,12 @@
-/**the default export was modifyied to 
- * in order to work with all the data
- * that i need for each practice*/
+/**JavaScript-Nuggets-app version 9 - 
+ * data js - Features: 
+ * 
+ *       --> adding an 'id' to 
+ *          'menu'
+ * 
+ * Note: changes maybe will apply later
+ * to this file
+ */
 
  export const data = [
     {
@@ -27,28 +33,34 @@
 //I add Unique Values data
 export const menu = [
     {
+     id:1,
      name: 'pancakes',
      category: 'breakfast'
     },
     {
-        name: 'burger',
-        category: 'lunch'
+     id:2,
+     name: 'burger',
+     category: 'lunch'
     },
     {
-        name: 'steak',
-        category: 'dinner'
+     id:3,
+     name: 'steak',
+     category: 'dinner'
     },
     {
-        name: 'bacon',
-        category: 'breakfast'
+     id:4,
+     name: 'bacon',
+     category: 'breakfast'
     },
     {
-        name: 'eggs',
-        category: 'breakfast'
+     id:5,
+     name: 'eggs',
+     category: 'breakfast'
     },
     {
-        name: 'pasta',
-        category: 'dinner'
+     id:6,
+     name: 'pasta',
+     category: 'dinner'
     }
 ];
 
