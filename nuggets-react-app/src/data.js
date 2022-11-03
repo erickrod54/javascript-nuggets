@@ -1,12 +1,39 @@
-/**JavaScript-Nuggets-app version 10 - 
+/**JavaScript-Nuggets-app version 11 - 
  * data js - Features: 
  * 
- *       --> Building 'staff' data 
- *           for reduce method.
+ *       --> Building 'linksData' data 
+ *           for navBar Component.
  * 
- * Note: changes maybe will apply later
- * to this file
+ * Note: By this version this data is going
+ * to be use to refactor navBar Component
  */
+
+ export const linksData = [
+    {
+      id:1,
+      url:'/map-method',
+      name:'map method',
+      description:'map method is like a \'for cycle\' in vainilla javaScript, but optimized'  
+    },
+    {
+      id:2,
+      url:'/unique-values',
+      name:'unque values',
+      description:'unique values creates a a new Set taking and array with duplicates and becoming it in a unique values array set'
+    },
+    {
+      id:3,
+      url:'/filter-and-find',
+      name:'filter and find',
+      description:'filter and find creates a new array from an old array based on the \'find\' and \'filter\' condidtions'
+    },
+    {
+      id:4,
+      url:'/reduce-method',
+      name:'reduce method',
+      description:'Reduce method takes two parameters, an \'accumulator\' and \'total\' to reduce a prop from an array to a single value (always remember to return the total )'
+    }
+ ]
 
  export const data = [
     {
