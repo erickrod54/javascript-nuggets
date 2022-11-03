@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { data, menu, staff } from './data';
+import { data, linksData, menu, staff } from './data';
 
-/**Nuggets-react-app version 10 - context js 
+/**Nuggets-react-app version 11 - context js 
  * - Features:
  * 
- *      --> Importing and providing 'staff' data.
+ *      --> Importing and providing 'linksData'.
  * 
  * Note: with 'staff' data is going to be built
  * the 'ReduceMethod'
@@ -21,7 +21,8 @@ export const NuggetsProvider = ({ children }) => {
             value={{
                 data,
                 menu,
-                staff
+                staff,
+                linksData
             }}>
             {children}
         </NuggetsContext.Provider>
