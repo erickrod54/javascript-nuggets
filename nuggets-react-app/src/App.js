@@ -1,20 +1,18 @@
 import React from 'react';
 import ErrorComponent from './error'
 import Home from './pages/home'
-import { FilterAndFind, MapMethod, UniqueValues } from './components/index.components'
+import { FilterAndFind, MapMethod, ReduceMethod, UniqueValues } from './components/index.components'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
-/**Nuggets react version 6 - App js file- Features: 
+/**Nuggets react version 11 - App js file- Features: 
  * 
- *     --> Removing Navbar to re structure in 
- *        'Home' Page. 
+ *     --> Importing and placing 'ReduceMethod'
+ *         and building a route for it. 
  * 
- * Note: This error was fixed by changing 'Error' 
- * for 'ErrorComponent'
- * 
- * By this version errors and warnings are 
- * cleared, so i can start the refactor
+ * Note: by this version i'll work refactoring
+ * navbar to add reduce-method and the future 
+ * methods
  */
 
 function App() {
@@ -27,7 +25,8 @@ function App() {
             <Route path='/map-method' element={<MapMethod />}/>
             <Route path='/unique-values'  element={<UniqueValues />}/>
             <Route path='/filter-and-find'  element={<FilterAndFind />}/>
-            <Route path='*'  element={<ErrorComponent />}/>          
+            <Route path='/reduce-method' element={<ReduceMethod />}/>          
+            <Route path='*'  element={<ErrorComponent />}/>
           </Route>
         </Routes>
       </Router>
