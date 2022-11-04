@@ -1,8 +1,7 @@
-/**JavaScript-Nuggets-app version 11 - 
+/**JavaScript-Nuggets-app version 12 - 
  * data js - Features: 
  * 
- *       --> Building 'linksData' data 
- *           for navBar Component.
+ *       --> Fixing typo in 'linksData'.
  * 
  * Note: By this version this data is going
  * to be use to refactor navBar Component
@@ -18,7 +17,7 @@
     {
       id:2,
       url:'/unique-values',
-      name:'unque values',
+      name:'unique values',
       description:'unique values creates a a new Set taking and array with duplicates and becoming it in a unique values array set'
     },
     {
