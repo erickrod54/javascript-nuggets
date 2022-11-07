@@ -17,7 +17,7 @@ const NavBar = () => {
 
     const { linksData } = useNuggetsContext()
 
-    console.log('testing links data ==> ', linksData)
+    //console.log('testing links data ==> ', linksData)
 
     return(
         <>
