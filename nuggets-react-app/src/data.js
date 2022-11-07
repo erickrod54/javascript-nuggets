@@ -1,7 +1,8 @@
-/**JavaScript-Nuggets-app version 12 - 
+/**JavaScript-Nuggets-app version 13 - 
  * data js - Features: 
  * 
- *       --> Fixing typo in 'linksData'.
+ *       --> Building 'fruits' and 'friends'
+ *           arrays for 'destructuring' practice.
  * 
  * Note: By this version this data is going
  * to be use to refactor navBar Component
@@ -31,6 +32,12 @@
       url:'/reduce-method',
       name:'reduce method',
       description:'Reduce method takes two parameters, an \'accumulator\' and \'total\' to reduce a prop from an array to a single value (always remember to return the total )'
+    },
+    {
+      id:5,
+      url:'/array-destructuring',
+      name:'array destructuring',
+      description:'destructure arrays is a way to get props as data, objects and more from an array '
     }
  ]
 
@@ -151,3 +158,7 @@ export const staff = [
         salary:10
     }
 ]
+
+export const fruits = ['orange','banana','lemon']
+
+export const friends = ['john','peter','bob','anna','kelly']
