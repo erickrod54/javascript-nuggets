@@ -1,4 +1,4 @@
-/**JavaScript-Nuggets-app version 13 - 
+/**JavaScript-Nuggets-app version 14 - 
  * data js - Features: 
  * 
  *       --> Building 'fruits' and 'friends'
@@ -162,3 +162,12 @@ export const staff = [
 export const fruits = ['orange','banana','lemon']
 
 export const friends = ['john','peter','bob','anna','kelly']
+
+export const bob = {
+    first:'bob',
+    last:'sanders',
+    city:'chicago',
+    siblings:{
+        sister:'jane',
+    },
+}
