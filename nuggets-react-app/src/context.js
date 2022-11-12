@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { data, friends, fruits, linksData, menu, staff } from './data';
+import { bob, data, friends, fruits, linksData, menu, staff } from './data';
 
-/**Nuggets-react-app version 13 - context js 
+/**Nuggets-react-app version 14 - context js 
  * - Features:
  * 
  *      --> Importing and providing 'friends' and
@@ -13,6 +13,8 @@ import { data, friends, fruits, linksData, menu, staff } from './data';
 
 /**Making the 'NuggetsContext' i'll have access
  * to the 'Consumer' and 'Provider' method */
+
+
 export const NuggetsContext = React.createContext();
 
 export const NuggetsProvider = ({ children }) => {
@@ -25,7 +27,8 @@ export const NuggetsProvider = ({ children }) => {
                 staff,
                 linksData,
                 fruits,
-                friends
+                friends,
+                bob
             }}>
             {children}
         </NuggetsContext.Provider>
