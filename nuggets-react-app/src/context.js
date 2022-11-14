@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
-import { bob, data, friends, fruits, johnData, linksData, menu, staff } from './data';
+import { academy, bestFriend, bob, boys, data, friends, fruits, girls, johnData, linksData, menu, staff, workers} from './data';
 
 
-/**Nuggets-react-app version 15 - context js 
+/**Nuggets-react-app version 17 - context js 
  * - Features:
  * 
- *      --> Importing and providing 'johnData'.
+ *      --> Importing and providing 'academy', 'boys', 
+ *          'girls', 'bestFriend', 'workers'.
  * 
- * Note: with 'staff' data is going to be built
- * the 'ReduceMethod'
+ * Note: this data will be use for spread operator.
  */
 
 /**Making the 'NuggetsContext' i'll have access
@@ -29,7 +29,12 @@ export const NuggetsProvider = ({ children }) => {
                 fruits,
                 friends,
                 bob,
-                johnData
+                johnData,
+                academy,
+                boys,
+                girls,
+                bestFriend,
+                workers                    
             }}>
             {children}
         </NuggetsContext.Provider>
