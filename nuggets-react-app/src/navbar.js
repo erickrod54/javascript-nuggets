@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useNuggetsContext } from "./context";
 
-/**JavaScrip nuggets React version 12 - NavBar -
+/**JavaScrip nuggets React version 17 - NavBar -
  * Features:
  * 
- *  --> Refactoring 'NavBar' to get the links
- *      dinamicly 
+ *  --> Finish refactoring 'NavBar' style links. 
  * 
  * Note: this component is going to be refactored
  * for the next versions
@@ -44,6 +43,8 @@ const NavBar = () => {
 const NavBarWrapper = styled.div`
 display: flex;
 justify-content: space-around;
+flex-wrap: wrap;
+
 
     ul{
         display: flex;
@@ -51,10 +52,29 @@ justify-content: space-around;
         margin: 10px;
         padding: 10px;
     }
-
+    
     li{
         flex-shrink: 0;
+    }
+    
+    a{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding: 1rem;
+        width: 7rem;
+        height: 3rem;
         text-decoration: none;
+        color: whitesmoke;
+        background-color: blueviolet;
+        border-radius: 0.50rem;
+        border: 1.5px solid orange;
+    }
+
+    a:hover{
+        cursor: pointer;
+        background-color: orange;
+        border: 1.5px solid blueviolet;
     }
 `
 
