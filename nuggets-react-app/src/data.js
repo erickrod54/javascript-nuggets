@@ -1,11 +1,12 @@
-/**JavaScript-Nuggets-app version 16 - 
+/**JavaScript-Nuggets-app version 17 - 
  * data js - Features: 
  * 
- *       --> Adding 'spread and rest' operators
- *          to 'linksData' 
+ *       --> Building 'academy', 'boys', 'girls', 'bestFriend',
+ *          'workers' data for 'spread operator' 
  * 
  * Note: By this version this data is going
  * to be use to refactor navBar Component
+ *  
  */
 
  export const linksData = [
@@ -188,3 +189,12 @@ export const bob = [
     },
 }
 ]
+
+export const academy = 'academy';
+
+export const boys = ['john', 'peter', 'bob'];
+export const girls = ['susan', 'anna'];
+
+export const bestFriend = 'arnold';
+
+export const workers = { name:'john', job:'developer' }
