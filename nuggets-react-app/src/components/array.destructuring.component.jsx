@@ -2,17 +2,10 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { useNuggetsContext } from "../context";
 
-
-/**Nuggets react version 15 - ArrayDestructuring  - 
+/**Nuggets react version 17 - ArrayDestructuring  - 
  * Features: 
- * 
- *     --> Destructuring 'bob' data to 
- *          implement object destructuring.
- *  
- *      --> Destructuring 'johnData' data to 
- *          implement 'rest' operator.
- * 
- *     --> Implementing 'rest' and 'spread'
+ *
+ *     --> Finish to implementing 'rest' and 'spread'
  *          operator.
  * 
  * Note: This component will be refactored in later
@@ -22,39 +15,85 @@ import { useNuggetsContext } from "../context";
 
 const ArrayDestructuring = () => {
 
-    const { fruits, friends, bob, johnData } = useNuggetsContext()
+    const { fruits, friends, bob, johnData, academy, boys, girls, bestFriend, workers } = useNuggetsContext()
 
-    console.log('th johnData ==>', johnData)    
+    //console.log('th johnData ==>', johnData)    
     const [ regular, setRegular ] = useState(false)
-
+    
     const [ bobobject, setBobobject ] = useState(false)
     const [ findfruit, setFindfruit ] = useState(false)
- 
+    
     //console.log('fruits array ==>', fruits)
-
+    
     /**here i access the 'fruits' items i want */
     const fruit1 = fruits[0]
     const fruit2 = fruits[1]
-
+    
     //console.log('single fruit 1 ==>', fruit1)
     //console.log('single fruit 2 ==>', fruit2)
     //console.log('friends array ==>', friends)
-
+    
     /**this variables are made in order to swap them */
     let firstNmae = 'bob ';
     let second = ' john';
-
+    
+    /**spread and rest operator - start */
+    
     /**here i destructure 'bob' data that has an object inside*/
     //const { first , last, city, siblings:{ sister } } = bob;
-
+    
     //console.log('bob data ==>', first , last, city, sister)
+    
+    /**spread operator - data */
+    
+    const [academyspread, setAcademy ] = useState(false)
+    const [ mypeople, setMypeople ] = useState(false)
+    const [ mynewpeople, setMynewpeople ] = useState(false)
+    const [ newworker, setNewworker ] = useState(false)
+    const [ newworker1, setNewworker1 ] = useState(false)    
 
+    const myPeople = [...boys, bestFriend, ...girls]
+    const myNewPeople = [...myPeople]
+    myNewPeople[0] = 'nancy';
+    
+    const newWorker = {...workers, city:'chicago'}
+
+    const newWorker1 = {...workers, city:'chicago', name: 'thomas'}
+
+    const letters = [...academy]
+    //console.log('this is letters==>',letters)
+    
+    const handleNewWorker = () => {
+        setNewworker(!newworker)
+    }
+
+    const handleNewWorker1 = () => {
+        setNewworker1(!newworker1)
+    }
+
+    const handlemyNewPeople = () => {
+        setMynewpeople(!mynewpeople)
+        console.log(mynewpeople)
+    }
+    
+    const  handleAcademy = () => {
+        setAcademy(!academyspread)
+        console.log(letters)
+    }
+
+    const handleMypeople = () => {
+        setMypeople(!mypeople)
+        console.log(myPeople)
+    }
+    
+    
     /**reference for destructure the 'rest' operator */
     const [ first, ...rest] = fruits;
-
+    
     const [ primero, segundo, ...resto ] = fruits;
-
+    
     const { name, ...restData} = johnData;
+
     
     /**here i can test how to access them directly */
     //const { lastName, job } = restData;
@@ -83,6 +122,7 @@ const ArrayDestructuring = () => {
         console.log(findfruit)
     }
     
+    /**spread and rest operator - end */
     return(
         <ArrayDestructuringWrapper>
             <h2>Array destructuring</h2>
@@ -405,7 +445,7 @@ const ArrayDestructuring = () => {
             </p>
 
             <section className="code-block">
-            <p>{`{`}</p>    
+                <p>{`{`}</p>    
                 <p>{`const getAverage = (name, ...scores) => {`}</p>
                 <p>{`console.log(name),`}</p>
                 <p>{`const average = scores.reduce((total,item4) => {`}</p>
@@ -420,16 +460,17 @@ const ArrayDestructuring = () => {
             '86 96 87 97'
             </p>
 
-            <button onClick={() => getAverage('david', 86, 96, 87, 97)}>get 'david' score</button>
             
             <section>
                 <p>{`() => getAverage('david', 86, 96, 87, 97)`}</p>
             </section>
-
+            
             <p>and the array can increase or decrease by the values that
                 i remove or add to the rest in a dinamic way, the result of
                 this operation is:
             </p>
+
+            <button onClick={() => getAverage('david', 86, 96, 87, 97)}>get 'david' score</button>
 
             <section>
                 <p>{`91.5`}</p>
@@ -437,9 +478,215 @@ const ArrayDestructuring = () => {
             
             <p>i can re-verify with the console prompt</p>
 
+            <h3>Array destrcturing - spread operator:</h3>
+
+            <p>About the 'spread' operator and its main difference with
+                rest:
+            </p>
+
+            <ul>
+                <li>allows and iterable to spread/expand individually inside the receiver</li>
+                <li>split into a single item and copy them</li>
+            </ul>
+
+            <p>so when i use 'rest' i am referencing to the 
+                memory space where the values or data 
+                actually are, so any change i made on the
+                'rest' will be reflected in the location data
+            </p>
+
+            <p>when i use 'spread' i split items an make a exact
+                copy of the values or data, so i can change 
+                keeping the original data intact            
+            </p>
+
+            <p>i have the data with the name academy:</p>
+
+            <section>
+                <p>{`const academy = 'academy'`}</p>
+            </section>
+
+            <p>
+                let's spread the 'academy':
+            </p>
+
+            <section>
+                <p>{`const letters = [...academy]`}</p>
+            </section>
+
+            <button onClick={handleAcademy}>spread academy</button>
+
+            <p>checking in the console i can see how 'spread' makes
+                from 'academy' collection of 7 'letters', so i can do
+                what i need to do with this letters:
+            </p>
+
+            {academyspread ?
+                <section className="code-block">
+                    {letters.map((letter, index) => {
+                        return(
+                            <div key={index}>
+                                <p>the index: {index} - and the letter - {letter}</p>
+                            </div>
+                        )
+                    })}
+
+                    <p>and the original 'academy' data remains intact:</p>
+                    <h4>{academy}</h4>
+
+                    <p>so in this case, i 'split' them and</p>
+                    <p>'copy' them in a new array 'letters'</p>
+                </section>
+            :
+            null
+            }
+        
+        <p>i have the arrays 'boys', 'girls' and 'bestFriends' and i want to
+            create a new 'myPeople' array where i can have values from this last three 
+            arrays:
+        </p>
+            <section className="code-block">
+                <p>{`const boys = ['john','peter','bob']`}</p>    
+                <p>{`const girls = ['susan','anna']`}</p>
+                <p>{`const bestFriend = 'arnold'`}</p>
+            </section>
+        
+        <p>i can think fast and say mm i'll put everthing in
+           'myPeople' array as this
+        </p>
+
+        <section>
+            <p>{`const myPeople = [boys, girls, bestFriend] `}</p>
+        </section>
+
+        <p>but this will result in a nested array as this:</p>
+
+        <section className="code-block">
+            <p>{`const myPeopleNested  `}</p>
+            <p>{`= [['john', 'peter', 'bob'], ['susan','anna'], 'arnold']  `}</p>
+        </section>
+
+        <p>and this is not the result that i want, i want a plain
+            array with all the elements, so i have to do it this 
+            way:
+        </p>
+
+        <section>
+            <p>{`const myPeople = [...boys, bestFriend, ...girls] `}</p>
+        </section>
+
+        <button onClick={handleMypeople}>create 'myPeople' array</button>
+
+        {mypeople ?
+            <section>
+                <p>{`[`}</p>
+                {myPeople.map((person, index) => {
+                    return(
+                        <div key={index}>
+                            <p>{person}</p>
+                        </div>
+                    )
+                })}
+                <p>{`]`}</p>
+            </section>
+        :
+        null
+        }
+
+        <p>so i have this new array of 'myPeople' and i need
+            to handle the 'reference' so i can change the first
+            name on the 'myPeople' array, i do this way:
+        </p>
+
+        <section className="code-block">
+            <p>{`const myNewPeople = [...myPeople] `}</p>
+            <p>i have to spread/copy the array that 
+                i built
+            </p>
+            <p>and then i can make the changes
+                that i need</p>
+        </section>
+
+        <p>for example if i change the first name from 'john'
+            to 'nancy' will be like this:
+        </p>
+
+        <section className="code-block">
+            <p>{`const myNewPeople = [...myPeople]`}</p>
+            <p>{`myNewPeople[0] = 'nancy';`}</p>
+        </section>
+
+        <button onClick={handlemyNewPeople}>change 'myPeople' to 'myNewPeople'</button>
+
+        {mynewpeople ?
+            <section>
+                <p>{`[`}</p>
+                {myNewPeople.map((newperson, index) => {
+                    return(
+                        <div key={index}>
+                            <p>{newperson}</p>
+                        </div>
+                    )
+                })}
+                <p>{`]`}</p>
+            </section>
+        :
+        null
+        }
+        <p>
+            for ES2018 - ES8 Objects and after conventions
+            it is a way to handle spread operator for objects,
+            for example i have the object:
+        </p>
+
+        <section >
+            <p>{`const worker = { name: ${workers.name}, job: ${workers.job} }`}</p>
+        </section>
+
+        <p>if i want to add more data for example 'city'
+            i can do it like this:
+        </p>
+
+        <section>
+            <p>{`const newWorker = {...workers, city:'chicago'}`}</p>
+        </section>
+
+        <button onClick={handleNewWorker}>build 'new worker'</button>
+
+        {newworker ?
+        <section>
+            <p>name: {newWorker.name}</p>
+            <p>job: {newWorker.job}</p>
+            <p>city: {newWorker.city}</p>
+        </section>
+        :
+        null
+        }
+
+        <p>if i want to to change the 'name' i can do it like
+            this:
+        </p>
+
+        <section className="code-block">
+            <p>{`const newWorker1 `}</p>
+            <p>{`= {...workers, city:'chicago', name: 'thomas'}`}</p>
+        </section>
+        
+        <button onClick={handleNewWorker1}>build 'new worker' with different 'name'</button>
+
+        {newworker1 ?
+            <section className="code-block"> 
+                <p>new name: {newWorker1.name}</p>
+                <p>job: {newWorker1.job}</p>
+                <p>city: {newWorker1.city}</p>
+            </section>
+        :
+        null
+        }
         </ArrayDestructuringWrapper>
     )
 }
+
 
 const ArrayDestructuringWrapper = styled.div`
     section, .code-block{
