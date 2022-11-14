@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import { bob, data, friends, fruits, linksData, menu, staff } from './data';
+import { bob, data, friends, fruits, johnData, linksData, menu, staff } from './data';
 
-/**Nuggets-react-app version 14 - context js 
+
+/**Nuggets-react-app version 15 - context js 
  * - Features:
  * 
- *      --> Importing and providing 'friends' and
- *          'fruits' data.
+ *      --> Importing and providing 'johnData'.
  * 
  * Note: with 'staff' data is going to be built
  * the 'ReduceMethod'
@@ -28,7 +28,8 @@ export const NuggetsProvider = ({ children }) => {
                 linksData,
                 fruits,
                 friends,
-                bob
+                bob,
+                johnData
             }}>
             {children}
         </NuggetsContext.Provider>
