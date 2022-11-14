@@ -1,8 +1,7 @@
-/**JavaScript-Nuggets-app version 14 - 
+/**JavaScript-Nuggets-app version 15 - 
  * data js - Features: 
  * 
- *       --> Building 'fruits' and 'friends'
- *           arrays for 'destructuring' practice.
+ *       --> Building 'johnData' 
  * 
  * Note: By this version this data is going
  * to be use to refactor navBar Component
@@ -161,13 +160,24 @@ export const staff = [
 
 export const fruits = ['orange','banana','lemon']
 
+export const johnData = 
+    {
+        name:'john',
+        lastName:'fonda',
+        job:'developer'
+    }
+
+
 export const friends = ['john','peter','bob','anna','kelly']
 
-export const bob = {
+export const bob = [
+    {
     first:'bob',
     last:'sanders',
     city:'chicago',
     siblings:{
         sister:'jane',
+        secondsister:'fonda'
     },
 }
+]
