@@ -1,7 +1,8 @@
-/**JavaScript-Nuggets-app version 15 - 
+/**JavaScript-Nuggets-app version 16 - 
  * data js - Features: 
  * 
- *       --> Building 'johnData' 
+ *       --> Adding 'spread and rest' operators
+ *          to 'linksData' 
  * 
  * Note: By this version this data is going
  * to be use to refactor navBar Component
@@ -37,6 +38,12 @@
       url:'/array-destructuring',
       name:'array destructuring',
       description:'destructure arrays is a way to get props as data, objects and more from an array '
+    },
+    {
+      id:6,
+      url:'/spread-and-rest-operator',
+      name:'spread and rest-operator',
+      description:'very much alike but completely different in implementation.'
     }
  ]
 
