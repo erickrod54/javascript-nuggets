@@ -1,8 +1,7 @@
-/**JavaScript-Nuggets-app version 17 - 
+/**JavaScript-Nuggets-app version 18 - 
  * data js - Features: 
  * 
- *       --> Building 'academy', 'boys', 'girls', 'bestFriend',
- *          'workers' data for 'spread operator' 
+ *       --> Adding 'ArrayFrom' to linksData. 
  * 
  * Note: By this version this data is going
  * to be use to refactor navBar Component
@@ -45,6 +44,12 @@
       url:'/spread-and-rest-operator',
       name:'spread and rest-operator',
       description:'very much alike but completely different in implementation.'
+    },
+    {
+      id:7,
+      url:'/array-from',
+      name:'array.from',
+      description:'array.from is a special method to return am array from an object'
     }
  ]
 
