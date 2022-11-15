@@ -1,3 +1,14 @@
+/**Nuggets react version 17 - index css  - 
+ * Features: 
+ *
+ *     --> Adding '.code-block' to 
+ *          index.css.
+ * 
+ * Note: This component will be refactored in later
+ * versions, 'spread' and 'rest' operator will have
+ * its own component in later versions.
+ */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +21,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.code-block{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
