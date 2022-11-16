@@ -1,13 +1,13 @@
 import React from 'react';
 import ErrorComponent from './error'
 import Home from './pages/home'
-import { ArrayDestructuring, ArrayFrom, FilterAndFind, MapMethod, ReduceMethod, SpreadAndRest, UniqueValues } from './components/index.components'
+import { ArrayDestructuring, ArrayFrom, FilterAndFind, MapMethod, OptionalChaining, ReduceMethod, SpreadAndRest, UniqueValues } from './components/index.components'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
-/**Nuggets react version 18 - App js file- Features: 
+/**Nuggets react version 19 - App js file- Features: 
  * 
- *     --> Importing and placing 'ArrayFrom'
+ *     --> Importing and placing 'OptionalChaining'
  *         and building a route for it. 
  * 
  * Note: by this version i'll work refactoring
@@ -28,7 +28,8 @@ function App() {
             <Route path='/reduce-method' element={<ReduceMethod />}/>  
             <Route path='/array-destructuring' element={<ArrayDestructuring />}/>
             <Route path='/spread-and-rest-operator' element={<SpreadAndRest />}/>
-            <Route path='/array-from' element={<ArrayFrom />}/>          
+            <Route path='/array-from' element={<ArrayFrom />}/>
+            <Route path='/optional-chaining' element={<OptionalChaining />}/>          
             <Route path='*'  element={<ErrorComponent />}/>
           </Route>
         </Routes>
