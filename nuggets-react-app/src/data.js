@@ -1,7 +1,11 @@
-/**JavaScript-Nuggets-app version 18 - 
+/**JavaScript-Nuggets-app version 19 - 
  * data js - Features: 
  * 
- *       --> Adding 'ArrayFrom' to linksData. 
+ *       --> Building 'people' data 
+ *          for optional chaining.
+ * 
+ *       --> Adding 'optional chaining' 
+ *           to 'linksData' 
  * 
  * Note: By this version this data is going
  * to be use to refactor navBar Component
@@ -50,6 +54,18 @@
       url:'/array-from',
       name:'array.from',
       description:'array.from is a special method to return am array from an object'
+    },
+    {
+      id:8,
+      url:'/optional-chaining',
+      name:'optional chaining',
+      description:'optional chaining is a implementations for arrays with nested objects'
+    },
+    {
+      id:9,
+      url:'/callback-function',
+      name:'callback function',
+      description:'optional chaining is a implementations for arrays with nested objects'
     }
  ]
 
@@ -203,3 +219,20 @@ export const girls = ['susan', 'anna'];
 export const bestFriend = 'arnold';
 
 export const workers = { name:'john', job:'developer' }
+
+export const people  = [
+    {
+        name:'bob',
+        location: { street: '123 main street'},
+        timezone:{ offset: '+7:00'}
+    },
+    {
+        name: 'peter',
+        locations:{street:'123 pine street'}
+    },
+    {
+        name:'susan',
+        location:{ street:'123 apple street'},
+        timezone:{ offset:'+9:00'}
+    }
+]
