@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-/**Nuggets react version 17 - ArrayDestructuring  - 
+/**Nuggets react version 20 - styled.components  - 
  * Features: 
  *
- *     --> Adding 'ArrayDestructuringWrapper' to 
+ *     --> Adding '.code-block-items' to 
  *          the file for style components.
  * 
  * Note: This component will be refactored in later
@@ -22,6 +22,16 @@ export const ArrayDestructuringWrapper = styled.div`
     button{
         margin-top: 1rem;
         margin-bottom: 1rem;
+    }
+
+    .code-block-items{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        
+        button{
+            font-size: 6px;
+        }
     }
 
     .hide{ 
