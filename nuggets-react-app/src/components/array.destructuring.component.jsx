@@ -2,14 +2,10 @@ import React, { useState } from "react";
 import { useNuggetsContext } from "../context";
 import { ArrayDestructuringWrapper } from "../styled.components";
 
-/**Nuggets react version 18 - ArrayDestructuring  - 
+/**Nuggets react version 20 - ArrayDestructuring  - 
  * Features: 
  *
- *     --> Removing 'ArrayDestructuringWrapper' to 
- *          the file for style components.
- * 
- *     --> Migrating 'spread and rest operator'
- *         to its own file
+ *     --> Adding 'keys' to bob map method
  * 
  * Note: This component will be refactored in later
  * versions, 'spread' and 'rest' operator will have
@@ -159,7 +155,7 @@ const ArrayDestructuring = () => {
              bob.map((data) => {
                  const { first , last, city } = data;
                  return(
-                     <div>
+                     <div key={first}>
                          <p>{`{`}</p>
                             <h3>{first},</h3>
                             <h3>{last},</h3>
