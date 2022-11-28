@@ -1,30 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
+import { useNuggetsContext } from "../context";
 import { OrSomePeople } from '../data'
 
-/**JavaScript-Nuggets-app version 12 - 
+/**JavaScript-Nuggets-app version 22 - 
  * FilterAndFind - Features: 
  * 
- *       --> Refactoring 'FilterAndFind'.
+ *       --> Migrating states and handlers
+ *           to the context.
  * 
  * Note: Pending to improve styles
  */
 
-const FilterAndFind = () => {
-  const [ filterby, setFilterBy ] = useState({
-    peopleUnder40: 40,
-    position:'Surgical Tech',
-    manager:''
-  })
+ const FilterAndFind = () => {
 
-  const handleFilterby = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-
-    console.log('filter => name selected ==>', name, ', value in it ==>', value)
-    
-    setFilterBy({...filterby, [name]:value })
-  }
+  const { filterby, handleFilterby } = useNuggetsContext()
 
     return(
         <>
