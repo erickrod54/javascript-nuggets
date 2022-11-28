@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import { useState } from 'react';
 import { academy, bestFriend, bob, boys, data, friends, fruits, girls, johnData, linksData, menu, people, staff, workers} from './data';
 
-/**Nuggets-react-app version 21 - context js 
+/**Nuggets-react-app version 22 - context js 
  * - Features:
  * 
  *      --> Placing states and handler and providing 
- *          them.
+ *          them (FilterAndFind).
  *  
  * Note: this data will be use for spread operator.
  */
@@ -46,6 +46,26 @@ export const NuggetsProvider = ({ children }) => {
     }
     /**states and handlers from 'array.from.component' - end */
 
+    /**filterAndFind handlers from 'FilterAndFind' - start */
+
+    
+        const [ filterby, setFilterBy ] = useState({
+          peopleUnder40: 40,
+          position:'Surgical Tech',
+          manager:''
+        })
+      
+        const handleFilterby = (e) => {
+          const name = e.target.name;
+          const value = e.target.value;
+      
+          console.log('filter => name selected ==>', name, ', value in it ==>', value)
+          
+          setFilterBy({...filterby, [name]:value })
+        }
+
+    /**filterAndFind handlers from 'FilterAndFind' - end */
+
     return(
         <NuggetsContext.Provider 
             value={{
@@ -67,7 +87,9 @@ export const NuggetsProvider = ({ children }) => {
                 items,
                 pages,
                 letters,
-                handleFindletter                    
+                filterby,
+                handleFindletter,
+                handleFilterby                    
             }}>
             {children}
         </NuggetsContext.Provider>
