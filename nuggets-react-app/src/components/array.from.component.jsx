@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNuggetsContext } from "../context";
 import { ArrayDestructuringWrapper } from "../styled.components";
 
-/**JavaScript-Nuggets-app version 19 - 
+/**JavaScript-Nuggets-app version 21 - 
  * ArrayFrom - Features: 
  * 
- *       --> Building 'ArrayFrom'. 
- * 
- *       --> Destructuring data from context.
- * 
- *       --> Building handleFindletter.
+ *       --> Migrating states and 
+ *          handlers to the context.
  * 
  * Note: By this version this data is going
  * to be use to refactor navBar Component
@@ -18,40 +15,18 @@ import { ArrayDestructuringWrapper } from "../styled.components";
 
 const ArrayFrom = () => {
 
-    const { academy } = useNuggetsContext()
-
-    const [ findletter, setFindletter ] = useState(false)
-
-
-    const letters = Array.from(academy)
-
-    const items = Array.from({ length: 120}, (_, index) => {
-        return index + 1
-    })
-
-    const itemsPerPage = 14;
-
-    const pages = Math.ceil(items.length / itemsPerPage )
-
-    const newItems = Array.from({ length: pages}, (_, index) =>
-    {
-        const start = index * itemsPerPage
-        const tempItems = items.slice(start, start + itemsPerPage)
-        return tempItems
-    }
-    )
-
-    console.log('items array in pages:', newItems)
+    const { academy,
+             letters,
+             findletter,
+             items,
+             handleFindletter,
+             pages } = useNuggetsContext()
+    
+    
 
     //console.log('the pages # is:', pages)
 
    //console.log('the items:',items)
-
-
-    const handleFindletter = () => {
-        setFindletter(!findletter)
-    }
-
     
 
     return(
