@@ -1,11 +1,8 @@
-/**JavaScript-Nuggets-app version 19 - 
+/**JavaScript-Nuggets-app version 23 - 
  * data js - Features: 
  * 
- *       --> Building 'people' data 
- *          for optional chaining.
- * 
- *       --> Adding 'optional chaining' 
- *           to 'linksData' 
+ *       --> Fixing people data for optional
+ *          chaining. 
  * 
  * Note: By this version this data is going
  * to be use to refactor navBar Component
@@ -223,7 +220,7 @@ export const workers = { name:'john', job:'developer' }
 export const people  = [
     {
         name:'bob',
-        location: { street: '123 main street'},
+        locations: { street: '123 main street'},
         timezone:{ offset: '+7:00'}
     },
     {
@@ -231,8 +228,8 @@ export const people  = [
         locations:{street:'123 pine street'}
     },
     {
-        name:'susan',
-        location:{ street:'123 apple street'},
-        timezone:{ offset:'+9:00'}
+        name: 'susan',
+        locations:{ street:'123 apple street'},
+        timezone:{ offset: '+9:00'}
     }
 ]
