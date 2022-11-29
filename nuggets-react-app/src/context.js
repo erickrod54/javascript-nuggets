@@ -2,11 +2,10 @@ import React, { useContext } from 'react';
 import { useState } from 'react';
 import { academy, bestFriend, bob, boys, data, friends, fruits, girls, johnData, linksData, menu, people, staff, workers} from './data';
 
-/**Nuggets-react-app version 22 - context js 
+/**Nuggets-react-app version 23 - context js 
  * - Features:
  * 
- *      --> Placing states and handler and providing 
- *          them (FilterAndFind).
+ *      --> Commenting logs.
  *  
  * Note: this data will be use for spread operator.
  */
@@ -39,7 +38,7 @@ export const NuggetsProvider = ({ children }) => {
     }
     )
 
-    console.log('items array in pages:', newItems)
+    //console.log('items array in pages:', newItems)
 
     const handleFindletter = () => {
         setFindletter(!findletter)
@@ -88,6 +87,7 @@ export const NuggetsProvider = ({ children }) => {
                 pages,
                 letters,
                 filterby,
+                newItems,
                 handleFindletter,
                 handleFilterby                    
             }}>
