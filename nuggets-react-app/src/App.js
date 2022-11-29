@@ -1,22 +1,21 @@
 import React from 'react';
 import ErrorComponent from './error'
 import Home from './pages/home'
-import { ArrayDestructuring, ArrayFrom, FilterAndFind, MapMethod, OptionalChaining, ReduceMethod, SpreadAndRest, UniqueValues } from './components/index.components'
+import { ArrayDestructuring, ArrayFrom, CallbackFunction, FilterAndFind, MapMethod, OptionalChaining, ReduceMethod, SpreadAndRest, UniqueValues } from './components/index.components'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
-/**Nuggets react version 19 - App js file- Features: 
+/**Nuggets react version 23 - App js file- Features: 
  * 
- *     --> Importing and placing 'OptionalChaining'
+ *     --> Importing and placing 'CallbackFunction'
  *         and building a route for it. 
  * 
  * Note: by this version i'll work refactoring
  * navbar to add reduce-method and the future 
  * methods
  */
-
 function App() {
-
+  
   return (
     <div className="App">
       <Router>
@@ -30,6 +29,7 @@ function App() {
             <Route path='/spread-and-rest-operator' element={<SpreadAndRest />}/>
             <Route path='/array-from' element={<ArrayFrom />}/>
             <Route path='/optional-chaining' element={<OptionalChaining />}/>          
+            <Route path='/callback-function' element={<CallbackFunction />}/>
             <Route path='*'  element={<ErrorComponent />}/>
           </Route>
         </Routes>
