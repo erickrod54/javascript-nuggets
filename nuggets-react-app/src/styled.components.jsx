@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-/**Nuggets react version 20 - styled.components  - 
+/**Nuggets react version 23 - styled.components  - 
  * Features: 
  *
- *     --> Adding '.code-block-items' to 
- *          the file for style components.
+ *     --> Adding '.red' to 
+ *          style class for optional-chaining.
  * 
  * Note: This component will be refactored in later
  * versions, 'spread' and 'rest' operator will have
@@ -46,6 +46,11 @@ export const ArrayDestructuringWrapper = styled.div`
             margin-left: 1rem;
         }
     }
+    }
+
+    .red{
+        font-weight:700;
+        color: red;
     }
 
 `
