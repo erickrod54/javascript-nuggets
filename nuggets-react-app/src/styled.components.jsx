@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-/**Nuggets react version 23 - styled.components  - 
+/**Nuggets react version 24 - styled.components  - 
  * Features: 
  *
- *     --> Adding '.red' to 
- *          style class for optional-chaining.
+ *     --> Adding styles for 'input', and 
+ *        'button'.
  * 
  * Note: This component will be refactored in later
  * versions, 'spread' and 'rest' operator will have
@@ -51,6 +51,13 @@ export const ArrayDestructuringWrapper = styled.div`
     .red{
         font-weight:700;
         color: red;
+    }
+
+    input,button{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
 `
